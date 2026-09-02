@@ -6,9 +6,9 @@
   "private": true,
   "license": "UNLICENSED",
   "type": "module",
-  "dev": "nest start --watch",
-  "typecheck": "tsc --noEmit",
   "scripts": {
+    "dev": "nest start --watch",
+    "typecheck": "tsc --noEmit",
     "build": "nest build",
     "deploy": "nest deploy",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
