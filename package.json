@@ -12,6 +12,9 @@
     "build": "pnpm -r --if-present run build",
     "lint": "pnpm -r --if-present run lint",
     "test": "pnpm -r --if-present run test",
-    "typecheck": "pnpm -r --if-present run typecheck"
+    "typecheck": "pnpm -r --if-present run typecheck",
+    "dev": "pnpm --parallel --filter @kitab-relay/api --filter @kitab-relay/web run dev",
+    "dev:api": "pnpm --filter @kitab-relay/api run dev",
+    "dev:web": "pnpm --filter @kitab-relay/web run dev"
   }
 }
