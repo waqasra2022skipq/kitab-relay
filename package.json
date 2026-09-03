@@ -15,6 +15,7 @@
     "typecheck": "pnpm -r --if-present run typecheck",
     "dev": "pnpm --parallel --filter @kitab-relay/api --filter @kitab-relay/web run dev",
     "dev:api": "pnpm --filter @kitab-relay/api run dev",
-    "dev:web": "pnpm --filter @kitab-relay/web run dev"
+    "dev:web": "pnpm --filter @kitab-relay/web run dev",
+    "contract:generate": "pnpm --dir apps/api openapi:generate && pnpm --filter @kitab-relay/api-client generate"
   }
 }
