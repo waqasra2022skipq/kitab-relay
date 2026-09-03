@@ -3,4 +3,7 @@ packages:
   - "packages/*"
   - "services/*"
 allowBuilds:
+  '@prisma/engines': true
+  '@scarf/scarf': true
+  prisma: true
   unrs-resolver: false

@@ -1,0 +1,21 @@
+name: kitab-relay
+
+services:
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: kitab_relay
+      POSTGRES_USER: kitab_relay
+      POSTGRES_PASSWORD: kitab_relay
+    ports:
+      - "5433:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U kitab_relay -d kitab_relay"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    volumes:
+      - kitab-relay-postgres:/var/lib/postgresql/data
+
+volumes:
+  kitab-relay-postgres:
